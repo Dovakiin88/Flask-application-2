@@ -39,14 +39,10 @@ def get_contact(current_user_token):
 '''
 @api.route('/contacts/<id>', methods = ['GET'])
 @token_required
-def update_contact(current_user_token, id):
-    a_user = current_user_token.token
-    if a_user:
-        contact = Contact.query.get(id)
-        response = contact_schema.dump(contact)
-        return jsonify(response)
-    else:
-        return jsonify({'message': "shit didnt work"}), 401
+def update_single_contact(current_user_token, id):
+    contact = Contact.query.get(id)
+    response = contact_schema.dump(contact)
+    return jsonify(response)
 '''
 
 #update contact

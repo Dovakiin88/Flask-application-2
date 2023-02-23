@@ -82,3 +82,18 @@ class ContactSchema(ma.Schema):
 
 contact_schema = ContactSchema()
 contacts_schema = ContactSchema(many=True)
+
+'''
+when loading onto glitch, be sure to readd in the requiremens file
+all you will need to do is tyoe the following command into the 
+glitch terminal:
+
+pip3 install -r requirements.txt
+pip3 install flask_wtf
+pip3 install marshmallow-sqlalchemy
+
+this will re install all the stuff you need.
+
+'''
+
+#website for phonebook: https://common-cream-quill.glitch.me/
